@@ -18,10 +18,59 @@
 	">
 
 	<util:list id="converters">
-		<!-- 
-			Add your own converters using entries of the following form: 
-			<bean class="converters.Class1ToClass2" /> 
-		-->
+			<bean class="converters.ActorToStringConverter" />
+		<bean class="converters.StringToActorConverter" />
+		
+		<bean class="converters.AdministratorToStringConverter" />
+		<bean class="converters.StringToAdministratorConverter" />
+		
+		<bean class="converters.AdoptionRequestToStringConverter" />
+		<bean class="converters.StringToAdoptionRequestConverter" />
+		
+		<bean class="converters.AdvertisementToStringConverter" />
+		<bean class="converters.StringToAdvertisementConverter" />
+		
+		<bean class="converters.CauseToStringConverter" />
+		<bean class="converters.StringToCauseConverter" />
+		
+		<bean class="converters.CommentToStringConverter" />
+		<bean class="converters.StringToCommentConverter" />
+		
+		<bean class="converters.CategoryToStringConverter" />
+		<bean class="converters.StringToCategoryConverter" />
+		
+		<bean class="converters.CompanyToStringConverter" />
+		<bean class="converters.StringToCompanyConverter" />
+		
+		<bean class="converters.DonationToStringConverter" />
+		<bean class="converters.StringToDonationConverter" />
+		
+		<bean class="converters.InscriptionToStringConverter" />
+		<bean class="converters.StringToInscriptionConverter" />
+		
+		<bean class="converters.JobOfferToStringConverter" />
+		<bean class="converters.StringToJobOfferConverter" />
+		
+		<bean class="converters.MessageToStringConverter" />
+		<bean class="converters.StringToMessageConverter" />
+		
+		<bean class="converters.PetToStringConverter" />
+		<bean class="converters.StringToPetConverter" />
+		
+		<bean class="converters.PriceAdvertisementToStringConverter" />
+		<bean class="converters.StringToPriceAdvertisementConverter" />
+		
+		<bean class="converters.SubActorToStringConverter" />
+		<bean class="converters.StringToSubActorConverter" />
+		
+		<bean class="converters.UserToStringConverter" />
+		<bean class="converters.StringToUserConverter" />
+		
+		<bean class="converters.ValorationToStringConverter" />
+		<bean class="converters.StringToValorationConverter" />
+		
+		<bean class="converters.VetToStringConverter" />
+		<bean class="converters.StringToVetConverter" />
 	</util:list>
 	
 </beans>
