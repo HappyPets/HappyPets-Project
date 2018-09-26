@@ -26,10 +26,12 @@
 
 <link rel="shortcut icon" href="favicon.ico"/> 
 
+<script type="text/javascript" src="scripts/bootstrap.js"></script>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jmenu.js"></script>
 
+<link rel="stylesheet" href="styles/bootstrap.css" type="text/css">
 <link rel="stylesheet" href="styles/common.css" type="text/css">
 <link rel="stylesheet" href="styles/jmenu.css" media="screen" type="text/css" />
 <link rel="stylesheet" href="styles/displaytag.css" type="text/css">

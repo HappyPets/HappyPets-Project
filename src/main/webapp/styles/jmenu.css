@@ -26,7 +26,7 @@
 	padding: 10px;
 	display: block;
 	background-color: transparent;
-	color: white;
+	color: white !important;
 	text-transform: uppercase;
 	cursor: pointer;
 	font-size: 12px;
