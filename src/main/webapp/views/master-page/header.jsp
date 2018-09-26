@@ -41,9 +41,16 @@
 		</security:authorize>
 		
 		<security:authorize access="isAnonymous()">
-			<li><a class="fNiv" href="security/login.do"><spring:message code="master.page.login" /></a></li>
+			<li><a class="fNiv"><spring:message code="master.page.access" /></a>
+				<ul>
+					<li class="arrow"></li>
+					<li><a href="security/login.do"><spring:message code="master.page.login" /></a></li>
+					<li><a href="user/register.do?edit=0"><spring:message code="master.page.registerUser" /></a></li>
+					<li><a href="company/register.do?edit=0"><spring:message code="master.page.registerCompany" /></a></li>
+					<li><a href="vet/register.do?edit=0"><spring:message code="master.page.registerVet" /></a></li>
+				</ul>
+			</li>
 		</security:authorize>
-		
 		<security:authorize access="isAuthenticated()">
 			<li>
 				<a class="fNiv"> 
