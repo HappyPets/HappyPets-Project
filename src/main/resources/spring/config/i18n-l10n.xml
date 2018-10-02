@@ -30,5 +30,6 @@
 		<value>/views/company/messages</value>
 		<value>/views/user/messages</value>
 		<value>/views/vet/messages</value>
+		<value>/views/pet/messages</value>
 	</util:list>
 </beans>
