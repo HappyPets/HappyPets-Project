@@ -1,8 +1,6 @@
 
 package controllers.subactor;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,20 +29,20 @@ public class ProfileSubActorController extends AbstractController {
 	private ValorationService	valorationService;
 
 
-	// List ---------------------------------------------------------------		
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public ModelAndView list() {
-		final ModelAndView res = new ModelAndView("subActor/list");
-		try {
-			final Collection<SubActor> subActors = this.subActorService.findAll();
-			final SubActor logued = (SubActor) this.actorService.findByPrincipal();
-			subActors.remove(logued);
-			res.addObject("subActors", subActors);
-		} catch (final Throwable oops) {
-			res.addObject("error", "error.list");
-		}
-		return res;
-	}
+	//	// List ---------------------------------------------------------------		
+	//	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	//	public ModelAndView list() {
+	//		final ModelAndView res = new ModelAndView("subActor/list");
+	//		try {
+	//			final Collection<SubActor> subActors = this.subActorService.findAll();
+	//			final SubActor logued = (SubActor) this.actorService.findByPrincipal();
+	//			subActors.remove(logued);
+	//			res.addObject("subActors", subActors);
+	//		} catch (final Throwable oops) {
+	//			res.addObject("error", "error.list");
+	//		}
+	//		return res;
+	//	}
 
 	@RequestMapping(value = "/display", method = RequestMethod.GET)
 	public ModelAndView display(@RequestParam final int subActorId, @RequestParam(required = false) final String valoratedOK) {
