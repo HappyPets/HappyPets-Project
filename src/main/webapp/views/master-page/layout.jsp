@@ -33,8 +33,9 @@
 
 <link rel="stylesheet" href="styles/bootstrap.css" type="text/css"> -->
 <link rel="stylesheet" href="styles/common.css" type="text/css">
-<link rel="stylesheet" href="styles/jmenu.css" media="screen" type="text/css"/>
-<!--<link rel="stylesheet" href="styles/displaytag.css" type="text/css"> -->
+<!--<link rel="stylesheet" href="styles/jmenu.css" media="screen" type="text/css"/>
+<link rel="stylesheet" href="styles/displaytag.css" type="text/css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fahkwang" >
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
