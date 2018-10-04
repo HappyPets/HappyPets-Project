@@ -31,7 +31,7 @@
 		<value>/views/user/messages</value>
 		<value>/views/vet/messages</value>
 		<value>/views/pet/messages</value>
-		
 		<value>/views/subActor/messages</value>
+		<value>/views/adoptionRequest/messages</value>
 	</util:list>
 </beans>

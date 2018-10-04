@@ -31,8 +31,8 @@
 		<value>/views/user/tiles.xml</value>
 		<value>/views/vet/tiles.xml</value>
 		<value>/views/pet/tiles.xml</value>
-		
 		<value>/views/subActor/tiles.xml</value>
+		<value>/views/adoptionRequest/tiles.xml</value>
 	</util:list>
 
 </beans>
