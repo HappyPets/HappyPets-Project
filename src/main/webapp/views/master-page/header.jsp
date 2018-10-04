@@ -18,15 +18,15 @@
 	<div class="row"><br>
 		<div class="col-md-12 navbar-header">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				</div>
-				<div class="col-md-6 text-center">
+				<div class="col-md-7 text-center">
 					<div class="row">
 						<div class="col-md-2">
-							<img src="images/logo.png" class="img-responsive img-circle" alt="Acme-newspaper, Inc." width="100px" height="100px" />
+							<img src="images/logo.png" class="img-responsive img-circle" alt="Happy-Pets, Inc." />
 						</div>
-						<div class="col-md-8">
-							<br><a class="fNiv navbar-brand" href="welcome/index.do">HappyPets</a>
+						<div class="col-md-5">
+							<h1><br><a class="fNiv navbar-brand" href="welcome/index.do">HAPPY PETS</a></h1>
 						</div>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 	</div><br>
-	<div class="row">
+	<div class="row menu-line">
 		<div class="col-md-10">
 			<ul id="jMenu" class="nav navbar-nav menu">
 				<li><a class="fNiv" href="welcome/index.do"><spring:message code="master.page.index" /></a></li>

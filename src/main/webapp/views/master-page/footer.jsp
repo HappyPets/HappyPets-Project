@@ -14,6 +14,13 @@
 
 <jsp:useBean id="date" class="java.util.Date" />
 
+<%--  <div class="footer-copyright text-center py-3">
+ 	<b>Copyright &copy; <fmt:formatDate value="${date}" pattern="yyyy" /> HAPPY PETS, Inc.</b>
+     <a href='terms/terms.do'><spring:message code="terms.display" /></a>
+ </div>
+
+ --%>
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12 text-center">
@@ -25,4 +32,4 @@
 			<a href='terms/terms.do'><spring:message code="terms.display" /></a>
 		</div>
 	</div>
-</div>
+</div> 

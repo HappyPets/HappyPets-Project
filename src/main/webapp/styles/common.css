@@ -12,7 +12,31 @@
 	color: red;
 	font-weight: bolder;
 }
+.navbar-inverse{
+	background-color: white !important;
+	border-color: white !important;
+}
 
+.menu-line{
+	background-color: #0B3861 !important;
+	border-color: #0B3861 !important;
+}
+.dropdown-toggle:hover{
+	background-color: #0B243B !important;
+}
+.dropdown-toggle:after{
+	background-color: #0B243B !important;
+}
+.navbar-brand{
+	color: black !important;
+	font-family: 'Fahkwang', sans-serif;
+	font-size: 24pt !important;
+	
+}
+
+.footer{
+	background-color: white !important;
+	border-color: white !important;
 .message {
 	color: red;
 	font-weight: bolder;
