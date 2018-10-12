@@ -33,5 +33,6 @@
 		<value>/views/pet/messages</value>
 		<value>/views/subActor/messages</value>
 		<value>/views/adoptionRequest/messages</value>
+		<value>/views/advertisement/messages</value>
 	</util:list>
 </beans>

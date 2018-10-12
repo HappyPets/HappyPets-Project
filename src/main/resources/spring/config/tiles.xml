@@ -33,6 +33,7 @@
 		<value>/views/pet/tiles.xml</value>
 		<value>/views/subActor/tiles.xml</value>
 		<value>/views/adoptionRequest/tiles.xml</value>
+		<value>/views/advertisement/tiles.xml</value>
 	</util:list>
 
 </beans>

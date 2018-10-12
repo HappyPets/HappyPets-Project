@@ -16,6 +16,32 @@
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<p><spring:message code="welcome.greeting.prefix" /> ${name}<spring:message code="welcome.greeting.suffix" /></p>
-
-<p><spring:message code="welcome.greeting.current.time" /> ${moment}</p> 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<jstl:if test="${errorMessage != null}">
+				<span class="message" style="color:red"><spring:message code="${errorMessage}" /></span>
+			</jstl:if>	
+			<jstl:if test="${errorMessage == null}">
+				<jstl:if test="${name eq null }">
+					<p><spring:message code="welcome.greeting.prefix" /> <spring:message code="welcome.unknown.user" /><spring:message code="welcome.greeting.suffix" /></p>
+				</jstl:if>
+				<jstl:if test="${name ne null }">
+					<p><spring:message code="welcome.greeting.prefix" /> ${name}<spring:message code="welcome.greeting.suffix" /></p>
+				</jstl:if>
+				
+				
+				<!-- Anuncio aleatorio -->
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<a href="${advertisement.targetPage}">
+							<img class="img-responsive center-block very-small-img" src="${advertisement.banner}" />
+						</a>
+					</div>
+				</div>
+			</jstl:if>
+		</div>
+	</div>
+</div> 
+<br><br>
