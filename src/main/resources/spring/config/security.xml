@@ -47,8 +47,14 @@
 		<security:intercept-url pattern="/profile/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY') or hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/pet/user/**" access="hasRole('USER')" />
 		<security:intercept-url pattern="/adoptionRequest/user/**" access="hasRole('USER')" />
+		<security:intercept-url pattern="/jobOffer/user/**" access="hasRole('USER')" />
+		<security:intercept-url pattern="/inscription/user/**" access="hasRole('USER')" />
+		
 		<security:intercept-url pattern="/advertisement/administrator/**" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/priceAdvertisement/administrator/**" access="hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/jobOffer/administrator/**" access="hasRole('ADMINISTRATOR')" />
+		
+		
 		<security:intercept-url pattern="/advertisement/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY')" />
 		
 		

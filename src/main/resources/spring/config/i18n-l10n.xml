@@ -34,5 +34,7 @@
 		<value>/views/subActor/messages</value>
 		<value>/views/adoptionRequest/messages</value>
 		<value>/views/advertisement/messages</value>
+		<value>/views/jobOffer/messages</value>
+		<value>/views/inscription/messages</value>
 	</util:list>
 </beans>
