@@ -36,5 +36,6 @@
 		<value>/views/advertisement/messages</value>
 		<value>/views/jobOffer/messages</value>
 		<value>/views/inscription/messages</value>
+		<value>/views/tabooWords/messages</value>
 	</util:list>
 </beans>

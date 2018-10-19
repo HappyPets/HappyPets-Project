@@ -36,6 +36,7 @@
 		<value>/views/advertisement/tiles.xml</value>
 		<value>/views/jobOffer/tiles.xml</value>
 		<value>/views/inscription/tiles.xml</value>
+		<value>/views/tabooWords/tiles.xml</value>
 	</util:list>
 
 </beans>
