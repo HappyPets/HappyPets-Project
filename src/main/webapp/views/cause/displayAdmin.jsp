@@ -96,7 +96,8 @@
 	<!-- start back button -->
 	<div class="row back-button">
 		<div class="col-md-6">
-			<acme:back code="cause.back"/>
+			<acme:cancel url="/cause/subActor/list.do" code="cause.back"/>
+					
 			<br/><br/>
 		</div>
 	</div>
