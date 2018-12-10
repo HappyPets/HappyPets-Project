@@ -5,6 +5,7 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -83,7 +84,7 @@ public class Cause extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	public Collection<Donation> getDonations() {
 		return this.donations;
 	}
