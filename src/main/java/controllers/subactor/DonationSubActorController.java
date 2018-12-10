@@ -1,6 +1,8 @@
 
 package controllers.subactor;
 
+import java.util.Collection;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,7 @@ import controllers.AbstractController;
 import domain.Cause;
 import domain.CreditCard;
 import domain.Donation;
+import domain.SubActor;
 import forms.DonationForm;
 
 @Controller
@@ -39,6 +42,22 @@ public class DonationSubActorController extends AbstractController {
 	private CreditCardService	creditCardService;
 
 
+	// List -------------------------------
+	@RequestMapping(value = "/list")
+	public ModelAndView list() {
+		ModelAndView res = new ModelAndView();
+		try {
+			Assert.isTrue(this.actorService.isCompany() || this.actorService.isUser() || this.actorService.isVet());
+			final SubActor subActor = (SubActor) this.actorService.findByPrincipal();
+			res = new ModelAndView("donation/list");
+			final Collection<Donation> donations = subActor.getDonations();
+			res.addObject("donations", donations);
+
+		} catch (final Throwable oops) {
+			res.addObject("error", "error.list.donation");
+		}
+		return res;
+	}
 	// Create ----------------------------------------------------------
 	@RequestMapping(value = "/create")
 	public ModelAndView create(@RequestParam final int causeId) {

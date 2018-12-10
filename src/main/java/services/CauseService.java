@@ -47,12 +47,12 @@ public class CauseService {
 		return res;
 	}
 
-	public Cause saveDonations(final Cause cause) {
-		Assert.notNull(cause);
-		Assert.isTrue(this.actorService.isAdmin() || this.actorService.isCompany() || this.actorService.isUser() || this.actorService.isVet());
-		final Cause res = this.causeRepository.save(cause);
-		return res;
-	}
+	//	public Cause saveDonations(final Cause cause) {
+	//		Assert.notNull(cause);
+	//		Assert.isTrue(this.actorService.isAdmin() || this.actorService.isCompany() || this.actorService.isUser() || this.actorService.isVet());
+	//		final Cause res = this.causeRepository.save(cause);
+	//		return res;
+	//	}
 
 	public Cause saveDeactive(final Cause cause) {
 		Assert.notNull(cause);

@@ -52,11 +52,6 @@ public class DonationService {
 		Assert.isTrue(this.causeService.getActiveCauses().contains(donation.getCausa()));
 		donation.setDonationMoment(new Date(Calendar.getInstance().getTimeInMillis() - 1000));
 		final Donation saved = this.donationRepository.save(donation);
-
-		final Cause cause = donation.getCausa();
-		cause.getDonations().add(donation);
-		this.causeService.saveDonations(cause);
-
 		return saved;
 	}
 

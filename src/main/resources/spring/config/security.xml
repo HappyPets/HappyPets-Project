@@ -60,7 +60,7 @@
 		
 		<security:intercept-url pattern="/advertisement/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY')" />
 		<security:intercept-url pattern="/cause/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY') or hasRole('ADMINISTRATOR')" />
-		<security:intercept-url pattern="/donation/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY') or hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/donation/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY')" />
 		
 	
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
