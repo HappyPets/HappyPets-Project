@@ -38,5 +38,6 @@
 		<value>/views/inscription/messages</value>
 		<value>/views/tabooWords/messages</value>
 		<value>/views/cause/messages</value>
+		<value>/views/donation/messages</value>
 	</util:list>
 </beans>
