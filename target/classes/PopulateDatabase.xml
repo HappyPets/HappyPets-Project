@@ -1,0 +1,3609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!-- 
+
+ * PopulateDatabase.xml
+
+ *
+
+ * Copyright (C) 2017 Universidad de Sevilla
+
+ * 
+
+ * The use of this project is hereby constrained to the conditions of the 
+
+ * TDG Licence, a copy of which you may download from 
+
+ * http://www.tdg-seville.info/License.html
+
+ -->
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xsi:schemaLocation="
+
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+	">
+
+	
+
+	<!-- User accounts -->
+
+
+
+	<bean id="userAccount1" class="security.UserAccount">
+
+		<property name="username" value="admin" />
+
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="ADMINISTRATOR" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount2" class="security.UserAccount">
+
+		<property name="username" value="user1" />
+
+		<property name="password" value="24c9e15e52afc47c225b757e7bee1f9d" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="USER" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount3" class="security.UserAccount">
+
+		<property name="username" value="user2" />
+
+		<property name="password" value="7e58d63b60197ceb55a1c487989a3720" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="USER" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount4" class="security.UserAccount">
+
+		<property name="username" value="user3" />
+
+		<property name="password" value="92877af70a45fd6a2ed7fe81e1236b78" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="USER" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount5" class="security.UserAccount">
+
+		<property name="username" value="user4" />
+
+		<property name="password" value="3f02ebe3d7929b091e3d8ccfde2f3bc6" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="USER" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount6" class="security.UserAccount">
+
+		<property name="username" value="user5" />
+
+		<property name="password" value="0a791842f52a0acfbb3a783378c066b8" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="USER" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount7" class="security.UserAccount">
+
+		<property name="username" value="vet01" />
+
+		<property name="password" value="d782d560d093eee0e10c9929ec613de1" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="VET" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount8" class="security.UserAccount">
+
+		<property name="username" value="vet02" />
+
+		<property name="password" value="c50ac9b94399530db8f986145d807c55" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="VET" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount9" class="security.UserAccount">
+
+		<property name="username" value="vet03" />
+
+		<property name="password" value="1be3c27cb1e5c8a4749c2a6ba14baffb" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="VET" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount10" class="security.UserAccount">
+
+		<property name="username" value="vet04" />
+
+		<property name="password" value="77dfb2b5932aaf49dd856cea3ea7dda2" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="VET" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount11" class="security.UserAccount">
+
+		<property name="username" value="vet05" />
+
+		<property name="password" value="fe5c8230ef5bb096a70a69e1d06367b5" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="VET" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount12" class="security.UserAccount">
+
+		<property name="username" value="company1" />
+
+		<property name="password" value="df655f976f7c9d3263815bd981225cd9" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="COMPANY" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount13" class="security.UserAccount">
+
+		<property name="username" value="company2" />
+
+		<property name="password" value="d196a28097115067fefd73d25b0c0be8" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="COMPANY" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="userAccount14" class="security.UserAccount">
+
+		<property name="username" value="company3" />
+
+		<property name="password" value="e828ae3339b8d80b3902c1564578804e" />
+
+		<property name="authorities">
+
+			<list>
+
+				<bean class="security.Authority">
+
+					<property name="authority" value="COMPANY" />
+
+				</bean>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<!-- Other domain beans come here -->
+
+	
+
+	<!-- ADMINISTRATOR -->	
+
+	<bean id="admin1" class="domain.Administrator">
+
+		<property name="userAccount" ref="userAccount1" />
+
+		<property name="causes">
+
+			<list>
+
+				<ref bean="cause1"/>
+
+				<ref bean="cause2"/>
+
+				<ref bean="cause3"/>
+
+				<ref bean="cause4"/>
+
+				<ref bean="cause5"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<!-- ADOPTION REQUEST -->
+
+	<bean id="adoptionRequest1" class="domain.AdoptionRequest">
+
+		<property name="status" value="PENDING"/>
+
+		<property name="requestMoment" value="10/15/2018 12:18"/>
+
+		<property name="adopter" ref="user2"/>
+
+		<property name="pet" ref="pet3"/>
+
+	</bean>
+
+	
+
+	<bean id="adoptionRequest2" class="domain.AdoptionRequest">
+
+		<property name="status" value="ACCEPTED"/>
+
+		<property name="requestMoment" value="10/15/2018 12:18"/>
+
+		<property name="adopter" ref="user3"/>
+
+		<property name="pet" ref="pet4"/>
+
+	</bean>
+
+	
+
+	<bean id="adoptionRequest3" class="domain.AdoptionRequest">
+
+		<property name="status" value="DENIED"/>
+
+		<property name="requestMoment" value="10/15/2018 12:18"/>
+
+		<property name="adopter" ref="user4"/>
+
+		<property name="pet" ref="pet5"/>
+
+	</bean>
+
+	
+
+	<bean id="adoptionRequest4" class="domain.AdoptionRequest">
+
+		<property name="status" value="PENDING"/>
+
+		<property name="requestMoment" value="10/15/2018 12:18"/>
+
+		<property name="adopter" ref="user5"/>
+
+		<property name="pet" ref="pet6"/>
+
+	</bean>
+
+	
+
+	<bean id="adoptionRequest5" class="domain.AdoptionRequest">
+
+		<property name="status" value="ACCEPTED"/>
+
+		<property name="requestMoment" value="09/28/2018 12:18"/>
+
+		<property name="adopter" ref="user1"/>
+
+		<property name="pet" ref="pet8"/>
+
+	</bean>
+
+	
+
+	<bean id="adoptionRequest6" class="domain.AdoptionRequest">
+
+		<property name="status" value="DENIED"/>
+
+		<property name="requestMoment" value="10/15/2018 12:18"/>
+
+		<property name="adopter" ref="user2"/>
+
+		<property name="pet" ref="pet9"/>
+
+	</bean>
+
+	<!-- PET -->
+
+	<bean id="pet1" class="domain.Pet">
+
+		<property name="category" ref="category2" />
+
+		<property name="name" value="Pet1" />
+
+		<property name="age" value="10" />
+
+		<property name="typeAge" value="MONTHS" />
+
+		<property name="weight" value="5.5" />
+
+		<property name="height" value="0.5" />
+
+		<property name="genre" value="MALE" />
+
+		<property name="description" value="Beautiful cat." />
+
+		<property name="healthDescription" value="This cat is in perfect health conditions." />
+
+		<property name="city" value="Seville" />
+
+		<property name="picture" value="http://besosdegato.com/wp-content/images/adopciones-gatos/fiona-gata-7m-01-2011-apap-alcala-2.jpg" />
+
+		<property name="inAdoption" value="false" />
+
+		<property name="owner" ref="user1" />
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet2" class="domain.Pet">
+
+		<property name="category" ref="category1" />
+
+		<property name="name" value="Pet2" />
+
+		<property name="age" value="2" />
+
+		<property name="typeAge" value="YEARS" />
+
+		<property name="weight" value="5.5" />
+
+		<property name="height" value="0.5" />
+
+		<property name="genre" value="MALE" />
+
+		<property name="description" value="Beautiful dog." />
+
+		<property name="healthDescription" value="This dog needs a revision." />
+
+		<property name="city" value="Madrid" />
+
+		<property name="picture" value="https://okdiario.com/img/2017/01/06/perros-curiosidades-b-655x368.jpg" />
+
+		<property name="inAdoption" value="false" />
+
+		<property name="owner" ref="user2"/>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet3" class="domain.Pet">
+
+		<property name="category" ref="category3" />
+
+		<property name="name" value="Pet3" />
+
+		<property name="age" value="2" />
+
+		<property name="typeAge" value="MONTHS" />
+
+		<property name="weight" value="0.5" />
+
+		<property name="height" value="0.1" />
+
+		<property name="genre" value="FEMALE" />
+
+		<property name="description" value="Funny canary bird." />
+
+		<property name="healthDescription" value="Perfect." />
+
+		<property name="city" value="Madrid" />
+
+		<property name="picture" value="https://static.vix.com/es/sites/default/files/styles/large/public/imj/hogartotal/L/Las-mejores-aves-para-mascotas-2.jpg" />
+
+		<property name="inAdoption" value="true" />
+
+		<property name="owner" ref="user3" />
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest1"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet4" class="domain.Pet">
+
+		<property name="category" ref="category4" />
+
+		<property name="name" value="Pet4" />
+
+		<property name="age" value="5" />
+
+		<property name="typeAge" value="MONTHS" />
+
+		<property name="weight" value="0.5" />
+
+		<property name="height" value="0.1" />
+
+		<property name="genre" value="FEMALE" />
+
+		<property name="description" value="Funny bunny." />
+
+		<property name="healthDescription" value="Perfect." />
+
+		<property name="city" value="Madrid" />
+
+		<property name="picture" value="https://t2.uc.ltmcdn.com/images/7/3/1/img_como_limpiar_la_jaula_de_un_conejo_42137_300_square.jpg" />
+
+		<property name="inAdoption" value="false" />
+
+		<property name="owner" ref="user4" />
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest2"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet5" class="domain.Pet">
+
+		<property name="category" ref="category2" />
+
+		<property name="name" value="Pet5" />
+
+		<property name="age" value="1" />
+
+		<property name="typeAge" value="YEARS" />
+
+		<property name="weight" value="0.5" />
+
+		<property name="height" value="0.1" />
+
+		<property name="genre" value="FEMALE" />
+
+		<property name="description" value="Loving cat." />
+
+		<property name="healthDescription" value="This cat needs sterilization." />
+
+		<property name="city" value="Madrid" />
+
+		<property name="picture" value="https://t1.ea.ltmcdn.com/es/images/7/1/2/img_cuidados_de_gatos_cachorros_21217_600.jpg" />
+
+		<property name="inAdoption" value="true" />
+
+		<property name="owner" ref="user5" />
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest3"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet6" class="domain.Pet">
+
+		<property name="category" ref="category4" />
+
+		<property name="name" value="Pet6" />
+
+		<property name="age" value="0" />
+
+		<property name="typeAge" value="MONTHS" />
+
+		<property name="weight" value="0.5" />
+
+		<property name="height" value="0.1" />
+
+		<property name="genre" value="MALE" />
+
+		<property name="description" value="Loving hamster. Aclaration: 3 weeks old." />
+
+		<property name="healthDescription" value="Fine." />
+
+		<property name="city" value="Valladolid" />
+
+		<property name="picture" value="http://www.elcomercio.com/files/article_main/uploads/2016/02/16/56c34dcc2ea5e.jpeg" />
+
+		<property name="inAdoption" value="true" />
+
+		<property name="owner" ref="user1" />
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest4"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet7" class="domain.Pet">
+
+		<property name="category" ref="category3" />
+
+		<property name="name" value="Pet7" />
+
+		<property name="age" value="2" />
+
+		<property name="typeAge" value="YEARS" />
+
+		<property name="weight" value="0.5" />
+
+		<property name="height" value="0.1" />
+
+		<property name="genre" value="MALE" />
+
+		<property name="description" value="Funny canary bird." />
+
+		<property name="healthDescription" value="Perfect." />
+
+		<property name="city" value="Seville" />
+
+		<property name="picture" value="https://www.anipedia.net/imagenes/canarios-800x375.jpg" />
+
+		<property name="inAdoption" value="true" />
+
+		<property name="owner" ref="user2" />
+
+		<property name="adoptionRequests">
+
+			<list>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet8" class="domain.Pet">
+
+		<property name="category" ref="category1" />
+
+		<property name="name" value="Pet8" />
+
+		<property name="age" value="2" />
+
+		<property name="typeAge" value="MONTHS" />
+
+		<property name="weight" value="5.5" />
+
+		<property name="height" value="0.5" />
+
+		<property name="genre" value="MALE" />
+
+		<property name="description" value="Beautiful dog." />
+
+		<property name="healthDescription" value="This dog needs a revision." />
+
+		<property name="city" value="Valencia" />
+
+		<property name="picture" value="https://cdn.tekcrispy.com/wp-content/uploads/2018/04/edad-perro-640x361.jpg"/>
+
+		<property name="inAdoption" value="false" />
+
+		<property name="owner" ref="user3"/>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest5"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="pet9" class="domain.Pet">
+
+		<property name="category" ref="category1" />
+
+		<property name="name" value="Pet9" />
+
+		<property name="age" value="2" />
+
+		<property name="typeAge" value="MONTHS" />
+
+		<property name="weight" value="5.5" />
+
+		<property name="height" value="0.5" />
+
+		<property name="genre" value="MALE" />
+
+		<property name="description" value="Beautiful dog." />
+
+		<property name="healthDescription" value="This dog needs a revision." />
+
+		<property name="city" value="Valencia" />
+
+		<property name="picture" value="http://d1lofqbqbj927c.cloudfront.net/GT-marca/2017/05/19173107/Perro-.jpeg" />
+
+		<property name="inAdoption" value="true" />
+
+		<property name="owner" ref="user4"/>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest6"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	<!-- MESSAGE -->
+
+	<bean id="message1" class="domain.Message">
+
+		<property name="subject" value="Subject Message 1"/>
+
+		<property name="text" value="Text Message 1"/>
+
+		<property name="sendMoment" value="09/18/2018 12:18"/>
+
+		<property name="sender" ref="user1"/>
+
+		<property name="receiver" ref="user2"/>
+
+		<property name="isCopy" value="false"/>
+
+	</bean>
+
+	
+
+	<bean id="message1_" class="domain.Message">
+
+		<property name="subject" value="Subject Message 1"/>
+
+		<property name="text" value="Text Message 1"/>
+
+		<property name="sendMoment" value="09/18/2018 12:18"/>
+
+		<property name="sender" ref="user1"/>
+
+		<property name="receiver" ref="user2"/>
+
+		<property name="isCopy" value="true"/>
+
+	</bean>
+
+	
+
+	<bean id="message2" class="domain.Message">
+
+		<property name="subject" value="Subject Message 2"/>
+
+		<property name="text" value="Text Message 2"/>
+
+		<property name="sendMoment" value="09/18/2018 13:31"/>
+
+		<property name="sender" ref="user2"/>
+
+		<property name="receiver" ref="user3"/>
+
+		<property name="isCopy" value="false"/>
+
+	</bean>
+
+	
+
+	<bean id="message2_" class="domain.Message">
+
+		<property name="subject" value="Subject Message 2"/>
+
+		<property name="text" value="Text Message 2"/>
+
+		<property name="sendMoment" value="09/18/2018 13:31"/>
+
+		<property name="sender" ref="user2"/>
+
+		<property name="receiver" ref="user3"/>
+
+		<property name="isCopy" value="true"/>
+
+	</bean>
+
+	
+
+	<bean id="message3" class="domain.Message">
+
+		<property name="subject" value="Subject Message 3"/>
+
+		<property name="text" value="Text Message 3"/>
+
+		<property name="sendMoment" value="09/18/2018 12:18"/>
+
+		<property name="sender" ref="user3"/>
+
+		<property name="receiver" ref="user4"/>
+
+		<property name="isCopy" value="false"/>
+
+	</bean>
+
+	
+
+	<bean id="message3_" class="domain.Message">
+
+		<property name="subject" value="Subject Message 3"/>
+
+		<property name="text" value="Text Message 3"/>
+
+		<property name="sendMoment" value="09/18/2018 13:31"/>
+
+		<property name="sender" ref="user3"/>
+
+		<property name="receiver" ref="user4"/>
+
+		<property name="isCopy" value="true"/>
+
+	</bean>
+
+	
+
+	<bean id="message4" class="domain.Message">
+
+		<property name="subject" value="Subject Message 4"/>
+
+		<property name="text" value="Text Message 4"/>
+
+		<property name="sendMoment" value="09/18/2018 23:52"/>
+
+		<property name="sender" ref="user4"/>
+
+		<property name="receiver" ref="user5"/>
+
+		<property name="isCopy" value="false"/>
+
+	</bean>
+
+	
+
+	<bean id="message4_" class="domain.Message">
+
+		<property name="subject" value="Subject Message 4"/>
+
+		<property name="text" value="Text Message 4"/>
+
+		<property name="sendMoment" value="09/18/2018 23:52"/>
+
+		<property name="sender" ref="user4"/>
+
+		<property name="receiver" ref="user5"/>
+
+		<property name="isCopy" value="true"/>
+
+	</bean>
+
+	
+
+	<bean id="message5" class="domain.Message">
+
+		<property name="subject" value="Subject Message 5"/>
+
+		<property name="text" value="Text Message 5"/>
+
+		<property name="sendMoment" value="09/18/2018 19:44"/>
+
+		<property name="sender" ref="user5"/>
+
+		<property name="receiver" ref="user1"/>
+
+		<property name="isCopy" value="false"/>
+
+	</bean>
+
+	
+
+	<bean id="message5_" class="domain.Message">
+
+		<property name="subject" value="Subject Message 5"/>
+
+		<property name="text" value="Text Message 5"/>
+
+		<property name="sendMoment" value="09/18/2018 19:44"/>
+
+		<property name="sender" ref="user5"/>
+
+		<property name="receiver" ref="user1"/>
+
+		<property name="isCopy" value="true"/>
+
+	</bean>
+
+	
+
+	
+
+	<!-- CAUSE -->
+
+	<bean id="cause1" class="domain.Cause">
+
+		<property name="title" value="Causa 1"/>
+
+		<property name="description" value="Descripción de la causa 1"/>
+
+		<property name="picture" value="http://www.icantriathlongandia.com/wp-content/uploads/2015/12/causas-beneficas-ican.jpg"/>
+
+		<property name="priority" value="HIGH"/>
+
+		<property name="isActive" value="true"/>
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation1"/>
+
+				<ref bean="donation2"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="cause2" class="domain.Cause">
+
+		<property name="title" value="Causa 2"/>
+
+		<property name="description" value="Descripción de la causa 2"/>
+
+		<property name="picture" value="http://www.fao.org/fileadmin/user_upload/AGRO_Noticias/img/manos.jpg"/>
+
+		<property name="priority" value="HIGH"/>
+
+		<property name="isActive" value="true"/>
+
+		<property name="donations">
+
+			<list>
+
+			
+
+				<ref bean="donation3"/>
+
+				<ref bean="donation4"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="cause3" class="domain.Cause">
+
+		<property name="title" value="Causa 3"/>
+
+		<property name="description" value="Descripción de la causa 3"/>
+
+		<property name="picture" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlOxlaINrULYUB-FN7rjXzWrMfJ9-_EPxEIcawmwZF3T19HsWt"/>
+
+		<property name="priority" value="LOW"/>
+
+		<property name="isActive" value="true"/>
+
+		<property name="donations">
+
+			<list>			
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="cause4" class="domain.Cause">
+
+		<property name="title" value="Causa 4"/>
+
+		<property name="description" value="Descripción de la causa 4"/>
+
+		<property name="picture" value="http://www.lospoliticosveracruz.com.mx/wp-content/uploads/2017/06/Gatos.jpg"/>
+
+		<property name="priority" value="NORMAL"/>
+
+		<property name="isActive" value="false"/>
+
+		<property name="donations">
+
+			<list>			
+
+				<ref bean="donation5"/>
+
+				<ref bean="donation6"/>
+
+				<ref bean="donation7"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="cause5" class="domain.Cause">
+
+		<property name="title" value="Causa 5"/>
+
+		<property name="description" value="Descripción de la causa 5"/>
+
+		<property name="picture" value="https://www.mundoperro.net/wp-content/uploads/pienso-perros.jpg"/>
+
+		<property name="priority" value="LOW"/>
+
+		<property name="isActive" value="true"/>
+
+		<property name="donations">
+
+			<list>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<!-- CREDITCARD -->
+
+	<bean id="creditCard1" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4539063820879468"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2020"/>
+
+		<property name="cvv" value="123"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard2" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard3" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard4" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard5" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard6" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard7" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard8" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard9" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<bean id="creditCard10" class="domain.CreditCard">
+
+		<property name="holderName" value="Holder Name"/>
+
+		<property name="brandName" value="VISA"/>
+
+		<property name="number" value="4242424242424242"/>
+
+		<property name="expirationMonth" value="01"/>
+
+		<property name="expirationYear" value="2021"/>
+
+		<property name="cvv" value="173"/>
+
+	</bean>
+
+	
+
+	<!-- TABOOWORDS -->
+
+	
+
+	<bean id="tabooWord1" class="domain.TabooWords">
+
+		<property name="words">
+
+			<list>
+
+				<value>sex</value>
+
+				<value>sexo</value>
+
+				<value>viagra</value>
+
+				<value>cialis</value>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	
+
+	<!-- INSCRIPTION -->
+
+	<bean id="inscription1" class="domain.Inscription">
+
+		<property name="inscriptionMoment" value="10/11/2018 12:00"/>
+
+		<property name="status" value="PENDING"/>
+
+		<property name="inscripter" ref="user2"/>
+
+		<property name="jobOffer" ref="jobOffer1"/>
+
+	</bean>
+
+	
+
+	<bean id="inscription2" class="domain.Inscription">
+
+		<property name="inscriptionMoment" value="10/11/2018 14:00"/>
+
+		<property name="status" value="PENDING"/>
+
+		<property name="inscripter" ref="user1"/>
+
+		<property name="jobOffer" ref="jobOffer2"/>
+
+	</bean>
+
+	
+
+	<bean id="inscription3" class="domain.Inscription">
+
+		<property name="inscriptionMoment" value="10/11/2018 14:00"/>
+
+		<property name="status" value="ACCEPTED"/>
+
+		<property name="inscripter" ref="user4"/>
+
+		<property name="jobOffer" ref="jobOffer3"/>
+
+	</bean>
+
+	
+
+	<bean id="inscription4" class="domain.Inscription">
+
+		<property name="inscriptionMoment" value="10/11/2018 14:00"/>
+
+		<property name="status" value="DENIED"/>
+
+		<property name="inscripter" ref="user4"/>
+
+		<property name="jobOffer" ref="jobOffer2"/>
+
+	</bean>
+
+	
+
+	<!-- JOB OFFER -->
+
+	<bean id="jobOffer1" class="domain.JobOffer">
+
+		<property name="title" value="Care my cat"/>
+
+		<property name="description" value="Care my cat during the weekend"/>
+
+		<property name="startDate" value="10/10/2018 12:00"/>
+
+		<property name="endDate" value="10/15/2018 12:00"/>
+
+		<property name="city" value="Sevilla"/>
+
+		<property name="salary" value="100.00"/>
+
+		<property name="isClosed" value="false"/>
+
+		<property name="isBanned" value="true"/>
+
+		<property name="owner" ref="user1"/>
+
+		<property name="pet" ref="pet1"/>
+
+		<property name="inscriptions">
+
+			<list>
+
+				<ref bean="inscription1"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="jobOffer2" class="domain.JobOffer">
+
+		<property name="title" value="Care my dog"/>
+
+		<property name="description" value="Care my dog during the weekend"/>
+
+		<property name="startDate" value="12/01/2018 12:00"/>
+
+		<property name="endDate" value="12/03/2018 12:00"/>
+
+		<property name="city" value="Sevilla"/>
+
+		<property name="salary" value="100.00"/>
+
+		<property name="isClosed" value="false"/>
+
+		<property name="isBanned" value="false"/>
+
+		<property name="owner" ref="user2"/>
+
+		<property name="pet" ref="pet2"/>
+
+		<property name="inscriptions">
+
+			<list>
+
+				<ref bean="inscription2"/>
+
+				<ref bean="inscription4"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="jobOffer3" class="domain.JobOffer">
+
+		<property name="title" value="Care my bird"/>
+
+		<property name="description" value="Care my dog during the weekend sex"/>
+
+		<property name="startDate" value="12/01/2018 12:00"/>
+
+		<property name="endDate" value="12/03/2018 12:00"/>
+
+		<property name="city" value="Madrid"/>
+
+		<property name="salary" value="100.00"/>
+
+		<property name="isClosed" value="true"/>
+
+		<property name="isBanned" value="false"/>
+
+		<property name="owner" ref="user3"/>
+
+		<property name="pet" ref="pet3"/>
+
+		<property name="inscriptions">
+
+			<list>
+
+			<ref bean="inscription3"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="jobOffer4" class="domain.JobOffer">
+
+		<property name="title" value="Care my cat"/>
+
+		<property name="description" value="Care my dog during two days"/>
+
+		<property name="startDate" value="01/01/2019 12:00"/>
+
+		<property name="endDate" value="01/03/2019 12:00"/>
+
+		<property name="city" value="Madrid"/>
+
+		<property name="salary" value="100.00"/>
+
+		<property name="isClosed" value="false"/>
+
+		<property name="isBanned" value="false"/>
+
+		<property name="owner" ref="user1"/>
+
+		<property name="pet" ref="pet1"/>
+
+		<property name="inscriptions">
+
+			<list>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<!-- VALORATION -->
+
+	<bean id="valoration1" class="domain.Valoration">
+
+		<property name="stars" value="4"/>
+
+		<property name="valorator" ref="user1"/>
+
+		<property name="valorated" ref="vet01"/>
+
+	</bean>
+
+
+
+	<bean id="valoration2" class="domain.Valoration">
+
+		<property name="stars" value="5"/>
+
+		<property name="valorator" ref="user2"/>
+
+		<property name="valorated" ref="company1"/>
+
+	</bean>	
+
+	
+
+	<bean id="valoration3" class="domain.Valoration">
+
+		<property name="stars" value="4"/>
+
+		<property name="valorator" ref="user3"/>
+
+		<property name="valorated" ref="user1"/>
+
+	</bean>
+
+	
+
+	<bean id="valoration4" class="domain.Valoration">
+
+		<property name="stars" value="4"/>
+
+		<property name="valorator" ref="user2"/>
+
+		<property name="valorated" ref="vet01"/>
+
+	</bean>
+
+	
+
+	<bean id="valoration5" class="domain.Valoration">
+
+		<property name="stars" value="5"/>
+
+		<property name="valorator" ref="user3"/>
+
+		<property name="valorated" ref="vet02"/>
+
+	</bean>
+
+	
+
+	<bean id="valoration6" class="domain.Valoration">
+
+		<property name="stars" value="5"/>
+
+		<property name="valorator" ref="user2"/>
+
+		<property name="valorated" ref="vet02"/>
+
+	</bean>
+
+	
+
+	<!-- USER -->	
+
+	<bean id="user1" class="domain.User">
+
+		<property name="userAccount" ref="userAccount2" />
+
+		<property name="name" value="Name User 1" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-A" />
+
+		<property name="email" value="user1@user.com" />
+
+		<property name="phone" value="612345678" />
+
+		<property name="address" value="User 1 Address" />
+
+		<property name="city" value="User 1 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="picture" value="https://image.flaticon.com/icons/svg/53/53159.svg" />
+
+		<property name="biography" value="User 1 biography" />
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation1"/>
+
+			</list>
+
+		</property>
+
+		<property name="sendedMessages">
+
+			<list>
+
+				<ref bean="message1"/>
+
+			</list>
+
+		</property>
+
+		<property name="receivedMessages">
+
+			<list>
+
+				<ref bean="message5_"/>
+
+			</list>
+
+		</property>
+
+		<property name="inscriptions">
+
+			<list>
+
+				<ref bean="inscription2"/>
+
+			</list>
+
+		</property>
+
+		<property name="jobOffers">
+
+			<list>
+
+				<ref bean="jobOffer1"/>
+
+			</list>
+
+		</property>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet1"/>
+
+				<ref bean="pet6"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsPosted">
+
+			<list>
+
+				<ref bean="valoration1"/>
+
+			</list>
+
+		</property>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest5"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				<ref bean="valoration3"/>
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment1"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				<ref bean="advertisement3"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="user2" class="domain.User">
+
+		<property name="userAccount" ref="userAccount3" />
+
+		<property name="name" value="Name User 2" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-B" />
+
+		<property name="email" value="user2@user.com" />
+
+		<property name="phone" value="623456789" />
+
+		<property name="address" value="User 2 Address" />
+
+		<property name="city" value="User 2 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="picture" value="https://image.flaticon.com/icons/svg/53/53119.svg" />
+
+		<property name="biography" value="User 2 biography" />
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation2"/>
+
+			</list>
+
+		</property>
+
+		<property name="sendedMessages">
+
+			<list>
+
+				<ref bean="message2"/>
+
+			</list>
+
+		</property>
+
+		<property name="receivedMessages">
+
+			<list>
+
+				<ref bean="message1_"/>
+
+			</list>
+
+		</property>
+
+		<property name="inscriptions">
+
+			<list>
+
+				<ref bean="inscription1"/>
+
+			</list>
+
+		</property>
+
+		<property name="jobOffers">
+
+			<list>
+
+				<ref bean="jobOffer2"/>
+
+			</list>
+
+		</property>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet2"/>
+
+				<ref bean="pet7"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsPosted">
+
+			<list>
+
+				<ref bean="valoration2"/>
+
+				<ref bean="valoration4"/>
+
+				<ref bean="valoration6"/>
+
+			</list>
+
+		</property>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest1"/>
+
+				<ref bean="adoptionRequest6"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment5"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				<ref bean="advertisement6"/>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="user3" class="domain.User">
+
+		<property name="userAccount" ref="userAccount4" />
+
+		<property name="name" value="Name User 3" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-C" />
+
+		<property name="email" value="user3@user.com" />
+
+		<property name="phone" value="634567890" />
+
+		<property name="address" value="User 3 Address" />
+
+		<property name="city" value="User 3 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="picture" value="https://image.flaticon.com/icons/png/512/18/18086.png" />
+
+		<property name="biography" value="User 3 biography" />
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation3"/>
+
+			</list>
+
+		</property>
+
+		<property name="sendedMessages">
+
+			<list>
+
+				<ref bean="message3"/>
+
+			</list>
+
+		</property>
+
+		<property name="receivedMessages">
+
+			<list>
+
+				<ref bean="message2_"/>
+
+			</list>
+
+		</property>
+
+		<property name="inscriptions">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="jobOffers">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet3"/>
+
+				<ref bean="pet8"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsPosted">
+
+			<list>
+
+				<ref bean="valoration3"/>
+
+				<ref bean="valoration5"/>
+
+			</list>
+
+		</property>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest2"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment6"/>
+
+				<ref bean="comment12"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="user4" class="domain.User">
+
+		<property name="userAccount" ref="userAccount5" />
+
+		<property name="name" value="Name User 4" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-D" />
+
+		<property name="email" value="user4@user.com" />
+
+		<property name="phone" value="645678901" />
+
+		<property name="address" value="User 4 Address" />
+
+		<property name="city" value="User 4 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="picture" value="https://www.shareicon.net/download/2015/12/03/681499_man.svg" />
+
+		<property name="biography" value="User 4 biography" />
+
+		<property name="donations">
+
+			<list>
+
+				<!-- Intencionally in blank -->
+
+			</list>
+
+		</property>
+
+		<property name="sendedMessages">
+
+			<list>
+
+				<ref bean="message4"/>
+
+			</list>
+
+		</property>
+
+		<property name="receivedMessages">
+
+			<list>
+
+				<ref bean="message3_"/>
+
+			</list>
+
+		</property>
+
+		<property name="inscriptions">
+
+			<list>
+
+				<ref bean="inscription3"/>
+
+				<ref bean="inscription4"/>
+
+			</list>
+
+		</property>
+
+		<property name="jobOffers">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet4"/>
+
+				<ref bean="pet9"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsPosted">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest3"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment11"/>
+
+				<ref bean="comment13"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="user5" class="domain.User">
+
+		<property name="userAccount" ref="userAccount6" />
+
+		<property name="name" value="Name User 5" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-E" />
+
+		<property name="email" value="user5@user.com" />
+
+		<property name="phone" value="656789012" />
+
+		<property name="address" value="User 5 Address" />
+
+		<property name="city" value="User 5 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="picture" value="https://image.flaticon.com/icons/png/512/53/53172.png" />
+
+		<property name="biography" value="User 5 biography" />
+
+		<property name="donations">
+
+			<list>
+
+				<!-- Intencionally in blank -->
+
+			</list>
+
+		</property>
+
+		<property name="sendedMessages">
+
+			<list>
+
+				<ref bean="message5"/>
+
+			</list>
+
+		</property>
+
+		<property name="receivedMessages">
+
+			<list>
+
+				<ref bean="message4_"/>
+
+			</list>
+
+		</property>
+
+		<property name="inscriptions">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="jobOffers">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet5"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsPosted">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="adoptionRequests">
+
+			<list>
+
+				<ref bean="adoptionRequest4"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment9"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<!-- ADVERTISEMENT -->
+
+	<bean id="advertisement1" class="domain.Advertisement">
+
+		<property name="ticker" value="1111-18"/>
+
+		<property name="banner" value="http://i41.tinypic.com/294jtyv.jpg"/>
+
+		<property name="targetPage" value="https://canitasveterinaria.com/"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard1"/>
+
+		<property name="subActor" ref="vet01"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement2" class="domain.Advertisement">
+
+		<property name="ticker" value="1112-18"/>
+
+		<property name="banner" value="https://elmanar.es/wp-content/uploads/2015/06/kiwoko-940x529.jpg"/>
+
+		<property name="targetPage" value="https://www.kiwoko.com/"/>
+
+		<property name="isBanned" value="True"/>
+
+		<property name="creditCard" ref="creditCard2"/>
+
+		<property name="subActor" ref="company1"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement3" class="domain.Advertisement">
+
+		<property name="ticker" value="1113-18"/>
+
+		<property name="banner" value="https://images.evisos.cl/2015/07/13/casas-para-perros-de-madera_2fb30b50e_3.jpg"/>
+
+		<property name="targetPage" value=""/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard3"/>
+
+		<property name="subActor" ref="user1"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement4" class="domain.Advertisement">
+
+		<property name="ticker" value="1114-18"/>
+
+		<property name="banner" value="http://elrefugioescuela.com/sofia/wp-content/uploads/2011/05/enara-512x10241.jpg"/>
+
+		<property name="targetPage" value="http://elrefugioescuela.com/"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard4"/>
+
+		<property name="subActor" ref="company3"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement5" class="domain.Advertisement">
+
+		<property name="ticker" value="1115-18"/>
+
+		<property name="banner" value="https://elsol-compress.s3-accelerate.amazonaws.com/imagenes/000/754/719/000754719-photo.jpg"/>
+
+		<property name="targetPage" value="https://www.vitalcan.es/"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard5"/>
+
+		<property name="subActor" ref="vet02"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement6" class="domain.Advertisement">
+
+		<property name="ticker" value="1116-18"/>
+
+		<property name="banner" value="http://marcelafittipaldi.com.ar/wp-content/uploads/2016/09/1-3.png"/>
+
+		<property name="targetPage" value=""/>
+
+		<property name="isBanned" value="True"/>
+
+		<property name="creditCard" ref="creditCard6"/>
+
+		<property name="subActor" ref="user2"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement7" class="domain.Advertisement">
+
+		<property name="ticker" value="1117-18"/>
+
+		<property name="banner" value="https://http2.mlstatic.com/vital-can-complete-junior-x-20-kg-oferta-zona-norte-il-cane-D_NQ_NP_862215-MLA25177696675_112016-F.jpg"/>
+
+		<property name="targetPage" value="https://www.vitalcan.es/"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard5"/>
+
+		<property name="subActor" ref="vet02"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement8" class="domain.Advertisement">
+
+		<property name="ticker" value="1118-18"/>
+
+		<property name="banner" value="http://www.autos-industria.com/assets/uploads/5aaf1-Vitalcan.jpg"/>
+
+		<property name="targetPage" value="https://www.vitalcan.es/"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard5"/>
+
+		<property name="subActor" ref="vet02"/>
+
+	</bean>
+
+	
+
+	
+
+	<bean id="advertisement9" class="domain.Advertisement">
+
+		<property name="ticker" value="1119-18"/>
+
+		<property name="banner" value="https://i.pinimg.com/originals/3d/5a/49/3d5a49d497e8fbc6cf47684fb390f326.jpg"/>
+
+		<property name="targetPage" value="http://elrefugioescuela.com/"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard4"/>
+
+		<property name="subActor" ref="company3"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement10" class="domain.Advertisement">
+
+		<property name="ticker" value="1120-18"/>
+
+		<property name="banner" value="https://i.pinimg.com/originals/3d/5a/49/3d5a49d497e8fbc6cf47684fb390f326.jpg"/>
+
+		<property name="targetPage" value="http://elrefugioescuela.com/"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="creditCard" ref="creditCard4"/>
+
+		<property name="subActor" ref="company3"/>
+
+	</bean>
+
+	
+
+	<bean id="advertisement11" class="domain.Advertisement">
+
+		<property name="ticker" value="1121-18"/>
+
+		<property name="banner" value="https://ecommerce-news.es/wp-content/uploads/2018/04/tiendanimal_2_lg.jpg"/>
+
+		<property name="targetPage" value="https://www.tiendanimal.es/"/>
+
+		<property name="isBanned" value="True"/>
+
+		<property name="creditCard" ref="creditCard7"/>
+
+		<property name="subActor" ref="company2"/>
+
+	</bean>
+
+	
+
+	
+
+	<!-- VET -->	
+
+	<bean id="vet01" class="domain.Vet">
+
+		<property name="userAccount" ref="userAccount7" />
+
+		<property name="name" value="Vet 1 Canitas" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-F" />
+
+		<property name="email" value="vet01@vet.com" />
+
+		<property name="phone" value="667890123" />
+
+		<property name="address" value="Vet 1 Address" />
+
+		<property name="city" value="Vet 1 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="licenseNumber" value="0123456789" />
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation4"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				<ref bean="valoration1"/>
+
+				<ref bean="valoration4"/>
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment2"/>
+
+				<ref bean="comment7"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				<ref bean="advertisement1"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="vet02" class="domain.Vet">
+
+		<property name="userAccount" ref="userAccount8" />
+
+		<property name="name" value="Name Vet 2" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-G" />
+
+		<property name="email" value="vet02@vet.com" />
+
+		<property name="phone" value="678901234" />
+
+		<property name="address" value="Vet 2 Address" />
+
+		<property name="city" value="Vet 2 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="licenseNumber" value="1234567890" />
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation5"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				<ref bean="valoration5"/>
+
+				<ref bean="valoration6"/>
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment4"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				<ref bean="advertisement5"/>
+
+				<ref bean="advertisement6"/>
+
+				<ref bean="advertisement7"/>
+
+				<ref bean="advertisement8"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="vet03" class="domain.Vet">
+
+		<property name="userAccount" ref="userAccount9" />
+
+		<property name="name" value="Name Vet 3" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-H" />
+
+		<property name="email" value="vet03@vet.com" />
+
+		<property name="phone" value="689012345" />
+
+		<property name="address" value="Vet 3 Address" />
+
+		<property name="city" value="Vet 3 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="licenseNumber" value="2345678901" />
+
+		<property name="donations">
+
+			<list>
+
+				<!-- Intencionally in blank -->
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="vet04" class="domain.Vet">
+
+		<property name="userAccount" ref="userAccount10" />
+
+		<property name="name" value="Name Vet 4" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-I" />
+
+		<property name="email" value="vet04@vet.com" />
+
+		<property name="phone" value="690123456" />
+
+		<property name="address" value="Vet 4 Address" />
+
+		<property name="city" value="Vet 4 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="licenseNumber" value="3456789012" />
+
+		<property name="donations">
+
+			<list>
+
+				<!-- Intencionally in blank -->
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment10"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="vet05" class="domain.Vet">
+
+		<property name="userAccount" ref="userAccount11" />
+
+		<property name="name" value="Name Vet 5" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-J" />
+
+		<property name="email" value="vet05@vet.com" />
+
+		<property name="phone" value="601234567" />
+
+		<property name="address" value="Vet 5 Address" />
+
+		<property name="city" value="Vet 5 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="licenseNumber" value="4567890123" />
+
+		<property name="donations">
+
+			<list>
+
+				<!-- Intencionally in blank -->
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	
+
+	<!-- DONATION -->
+
+	<bean id="donation1" class="domain.Donation">
+
+		<property name="donationMoment" value="09/20/2018 12:05"/>
+
+		<property name="quantity" value="288.00"/>
+
+		<property name="creditCard" ref="creditCard1"/>
+
+		<property name="donor" ref="user1"/>
+
+		<property name="causa" ref="cause1"/>
+
+	</bean>
+
+	
+
+	<bean id="donation2" class="domain.Donation">
+
+		<property name="donationMoment" value="09/20/2018 13:14"/>
+
+		<property name="quantity" value="288.00"/>
+
+		<property name="creditCard" ref="creditCard2"/>
+
+		<property name="donor" ref="user2"/>
+
+		<property name="causa" ref="cause1"/>
+
+	</bean>
+
+	
+
+	<bean id="donation3" class="domain.Donation">
+
+		<property name="donationMoment" value="09/20/2018 08:12"/>
+
+		<property name="quantity" value="288.00"/>
+
+		<property name="creditCard" ref="creditCard3"/>
+
+		<property name="donor" ref="user3"/>
+
+		<property name="causa" ref="cause2"/>
+
+	</bean>
+
+	
+
+	<bean id="donation4" class="domain.Donation">
+
+		<property name="donationMoment" value="09/10/2018 20:11"/>
+
+		<property name="quantity" value="288.00"/>
+
+		<property name="creditCard" ref="creditCard6"/>
+
+		<property name="donor" ref="vet01"/>
+
+		<property name="causa" ref="cause2"/>
+
+	</bean>
+
+	
+
+	<bean id="donation5" class="domain.Donation">
+
+		<property name="donationMoment" value="09/22/2018 17:15"/>
+
+		<property name="quantity" value="288.00"/>
+
+		<property name="creditCard" ref="creditCard7"/>
+
+		<property name="donor" ref="vet02"/>
+
+		<property name="causa" ref="cause4"/>
+
+	</bean>
+
+	
+
+	<bean id="donation6" class="domain.Donation">
+
+		<property name="donationMoment" value="09/23/2018 19:34"/>
+
+		<property name="quantity" value="288.00"/>
+
+		<property name="creditCard" ref="creditCard8"/>
+
+		<property name="donor" ref="company2"/>
+
+		<property name="causa" ref="cause4"/>
+
+	</bean>
+
+	
+
+	<bean id="donation7" class="domain.Donation">
+
+		<property name="donationMoment" value="09/23/2018 23:18"/>
+
+		<property name="quantity" value="288.00"/>
+
+		<property name="creditCard" ref="creditCard10"/>
+
+		<property name="donor" ref="company3"/>
+
+		<property name="causa" ref="cause4"/>
+
+	</bean>
+
+	
+
+	
+
+	
+
+	<!-- COMPANY -->
+
+	<bean id="company1" class="domain.Company">
+
+		<property name="userAccount" ref="userAccount12" />
+
+		<property name="name" value="Company 1 kiwoko" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-J" />
+
+		<property name="email" value="company1@company.com" />
+
+		<property name="phone" value="698765432" />
+
+		<property name="address" value="Company 1 Address" />
+
+		<property name="city" value="Company 1 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="businessName" value="Social Reason Company 1" />
+
+		<property name="VAT" value="ES01234567A" />
+
+		<property name="donations">
+
+			<list>
+
+				<!-- Intencionally in blank -->
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				<ref bean="advertisement2"/>
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment3"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				<ref bean="valoration2"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="company2" class="domain.Company">
+
+		<property name="userAccount" ref="userAccount13" />
+
+		<property name="name" value="Name Company 2" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-J" />
+
+		<property name="email" value="company2@company.com" />
+
+		<property name="phone" value="687654321" />
+
+		<property name="address" value="Company 2 Address" />
+
+		<property name="city" value="Company 2 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="businessName" value="Social Reason Company 1" />
+
+		<property name="VAT" value="ES01234567B" />
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation6"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				<ref bean="advertisement11"/>
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				<ref bean="comment8"/>
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<bean id="company3" class="domain.Company">
+
+		<property name="userAccount" ref="userAccount14" />
+
+		<property name="name" value="Name Company 3" />
+
+		<property name="surname" value="Surname" />
+
+		<property name="DNI" value="12345678-J" />
+
+		<property name="email" value="company3@company.com" />
+
+		<property name="phone" value="698765432" />
+
+		<property name="address" value="Company 3 Address" />
+
+		<property name="city" value="Company 3 City" />
+
+		<property name="birthDate" value="01/01/1970" />
+
+		<property name="businessName" value="Social Reason Company 1" />
+
+		<property name="VAT" value="01234567C" />
+
+		<property name="donations">
+
+			<list>
+
+				<ref bean="donation7"/>
+
+			</list>
+
+		</property>
+
+		<property name="advertisements">
+
+			<list>
+
+				<ref bean="advertisement4"/>
+
+				<ref bean="advertisement9"/>
+
+				<ref bean="advertisement10"/>
+
+			</list>
+
+		</property>
+
+		<property name="comments">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+		<property name="valorationsReceived">
+
+			<list>
+
+				
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<!-- COMMENT -->
+
+	<bean id="comment1" class="domain.Comment">
+
+		<property name="title" value="Comment1"/>
+
+		<property name="text" value="Text comment 1"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category2"/>
+
+		<property name="subActor" ref="user1"/>
+
+	</bean>
+
+	
+
+	<bean id="comment2" class="domain.Comment">
+
+		<property name="title" value="Comment2"/>
+
+		<property name="text" value="Text comment 2"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category1"/>
+
+		<property name="subActor" ref="vet01"/>
+
+	</bean>
+
+	
+
+	<bean id="comment3" class="domain.Comment">
+
+		<property name="title" value="Comment3"/>
+
+		<property name="text" value="Text comment 3"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category4"/>
+
+		<property name="subActor" ref="company1"/>
+
+	</bean>
+
+	
+
+	<bean id="comment4" class="domain.Comment">
+
+		<property name="title" value="Comment4"/>
+
+		<property name="text" value="Text comment 4"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category2"/>
+
+		<property name="subActor" ref="vet02"/>
+
+	</bean>
+
+	
+
+	<bean id="comment5" class="domain.Comment">
+
+		<property name="title" value="Comment5"/>
+
+		<property name="text" value="Text comment 5"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category1"/>
+
+		<property name="subActor" ref="user2"/>
+
+	</bean>
+
+	
+
+	<bean id="comment6" class="domain.Comment">
+
+		<property name="title" value="Comment6"/>
+
+		<property name="text" value="Text comment 6 sex"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="True"/>
+
+		<property name="category" ref="category1"/>
+
+		<property name="subActor" ref="user3"/>
+
+	</bean>
+
+	
+
+	<bean id="comment7" class="domain.Comment">
+
+		<property name="title" value="Comment7"/>
+
+		<property name="text" value="Text comment 7"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category1"/>
+
+		<property name="subActor" ref="vet01"/>
+
+	</bean>
+
+	
+
+	<bean id="comment8" class="domain.Comment">
+
+		<property name="title" value="Comment8"/>
+
+		<property name="text" value="Text comment 8"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category2"/>
+
+		<property name="subActor" ref="company2"/>
+
+	</bean>
+
+	
+
+	<bean id="comment9" class="domain.Comment">
+
+		<property name="title" value="Comment9"/>
+
+		<property name="text" value="Text comment 9"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category3"/>
+
+		<property name="subActor" ref="user5"/>
+
+	</bean>
+
+	
+
+	<bean id="comment10" class="domain.Comment">
+
+		<property name="title" value="Comment10"/>
+
+		<property name="text" value="Text comment 10"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category3"/>
+
+		<property name="subActor" ref="vet04"/>
+
+	</bean>
+
+	
+
+	<bean id="comment11" class="domain.Comment">
+
+		<property name="title" value="Comment11"/>
+
+		<property name="text" value="Text comment 11"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="True"/>
+
+		<property name="category" ref="category4"/>
+
+		<property name="subActor" ref="user4"/>
+
+	</bean>
+
+	
+
+	<bean id="comment12" class="domain.Comment">
+
+		<property name="title" value="Comment12"/>
+
+		<property name="text" value="Text comment 12"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="False"/>
+
+		<property name="category" ref="category5"/>
+
+		<property name="subActor" ref="user3"/>
+
+	</bean>
+
+	
+
+	<bean id="comment13" class="domain.Comment">
+
+		<property name="title" value="Comment13"/>
+
+		<property name="text" value="Text comment 13 viagra"/>
+
+		<property name="publicationMoment" value="10/16/2018 12:00"/>
+
+		<property name="isBanned" value="True"/>
+
+		<property name="category" ref="category5"/>
+
+		<property name="subActor" ref="user4"/>
+
+	</bean>
+
+	
+
+	<!-- CATEGORY -->
+
+	<bean id="category1" class="domain.Category">
+
+		<property name="name" value="DOG"/>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet2"/>
+
+				<ref bean="pet8"/>
+
+				<ref bean="pet9"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	<bean id="category2" class="domain.Category">
+
+		<property name="name" value="CAT"/>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet1"/>
+
+				<ref bean="pet5"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	<bean id="category3" class="domain.Category">
+
+		<property name="name" value="BIRD"/>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet3"/>
+
+				<ref bean="pet7"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	<bean id="category4" class="domain.Category">
+
+		<property name="name" value="RODENT"/>
+
+		<property name="pets">
+
+			<list>
+
+				<ref bean="pet4"/>
+
+				<ref bean="pet6"/>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	<bean id="category5" class="domain.Category">
+
+		<property name="name" value="OTHER"/>
+
+		<property name="pets">
+
+			<list>
+
+			</list>
+
+		</property>
+
+	</bean>
+
+	
+
+	<!-- PRICE ADVERTISEMENT -->
+
+	<bean id="priceAdvertisement1" class="domain.PriceAdvertisement">
+
+		<property name="value" value="150.00"/>
+
+	</bean>
+
+</beans>

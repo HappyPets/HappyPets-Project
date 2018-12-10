@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import services.ActorService;
 import services.CauseService;
 import controllers.AbstractController;
 import domain.Cause;
@@ -20,6 +21,9 @@ public class CauseSubActorController extends AbstractController {
 	@Autowired
 	private CauseService	causeService;
 
+	@Autowired
+	private ActorService	actorService;
+
 
 	// List -------------------------------
 	@RequestMapping(value = "/list")
@@ -28,9 +32,11 @@ public class CauseSubActorController extends AbstractController {
 		try {
 			res = new ModelAndView("cause/list");
 			final Collection<Cause> causes = this.causeService.getActiveCauses();
-			final Collection<Cause> cancelCauses = this.causeService.getDeactiveCauses();
+			if (this.actorService.isAuthenticated() && this.actorService.isAdmin()) {
+				final Collection<Cause> cancelCauses = this.causeService.getDeactiveCauses();
+				res.addObject("cancelCauses", cancelCauses);
+			}
 			res.addObject("causes", causes);
-			res.addObject("cancelCauses", cancelCauses);
 
 		} catch (final Throwable oops) {
 			res.addObject("error", "error.list");
