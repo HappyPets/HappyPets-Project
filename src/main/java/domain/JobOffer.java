@@ -65,7 +65,7 @@ public class JobOffer extends DomainEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	public Date getStartDate() {
 		return this.startDate;
 	}
@@ -76,7 +76,7 @@ public class JobOffer extends DomainEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	public Date getEndDate() {
 		return this.endDate;
 	}

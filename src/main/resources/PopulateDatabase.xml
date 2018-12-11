@@ -1464,9 +1464,9 @@
 
 		<property name="description" value="Care my cat during the weekend"/>
 
-		<property name="startDate" value="10/10/2018 12:00"/>
+		<property name="startDate" value="10/10/2018"/>
 
-		<property name="endDate" value="10/15/2018 12:00"/>
+		<property name="endDate" value="10/15/2018"/>
 
 		<property name="city" value="Sevilla"/>
 
@@ -1500,9 +1500,9 @@
 
 		<property name="description" value="Care my dog during the weekend"/>
 
-		<property name="startDate" value="12/01/2018 12:00"/>
+		<property name="startDate" value="12/01/2018"/>
 
-		<property name="endDate" value="12/03/2018 12:00"/>
+		<property name="endDate" value="12/03/2018"/>
 
 		<property name="city" value="Sevilla"/>
 
@@ -1538,9 +1538,9 @@
 
 		<property name="description" value="Care my dog during the weekend sex"/>
 
-		<property name="startDate" value="12/01/2018 12:00"/>
+		<property name="startDate" value="12/01/2018"/>
 
-		<property name="endDate" value="12/03/2018 12:00"/>
+		<property name="endDate" value="12/03/2018"/>
 
 		<property name="city" value="Madrid"/>
 
@@ -1574,9 +1574,9 @@
 
 		<property name="description" value="Care my dog during two days"/>
 
-		<property name="startDate" value="01/01/2019 12:00"/>
+		<property name="startDate" value="01/01/2019"/>
 
-		<property name="endDate" value="01/03/2019 12:00"/>
+		<property name="endDate" value="01/03/2019"/>
 
 		<property name="city" value="Madrid"/>
 

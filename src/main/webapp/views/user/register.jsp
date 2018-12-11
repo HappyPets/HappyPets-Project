@@ -8,6 +8,21 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
+<!-- -----------DATAPICKER------------- -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy', changeYear: true, yearRange: "1955:2001"});
+  } );
+  </script>
+  
+<!-- ---------FIN DATAPICKER-------------- -->
+
+
 <!-- New User View -->
 <div class="container-fluid">
 	<div class="row">
@@ -24,7 +39,7 @@
 						</div>
 					</div><hr>
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-6">
 							<acme:textbox code="user.picture" path="picture"/>
 						</div>
 					</div>
@@ -36,14 +51,15 @@
 							<acme:textbox code="user.surname" path="surname"/>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row ">
 						<div class="col-md-6">
-							<acme:textbox code="user.dni" path="DNI"/>
+							<acme:textbox code="user.dni" path="DNI" />
 						</div>
 						<div class="col-md-6">
-							<acme:textbox code="user.birthDate" path="birthDate"/>
+							<b><spring:message code="user.birthDate"/></b><input type="text" id="datepicker" name="birthDate" form="userForm">
 						</div>
 					</div>
+					
 					<div class="row">
 						<div class="col-md-6">
 							<acme:textbox code="user.email" path="email"/>

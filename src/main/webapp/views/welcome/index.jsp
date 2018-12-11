@@ -16,6 +16,7 @@
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -30,6 +31,7 @@
 					<p><spring:message code="welcome.greeting.prefix" /> ${name}<spring:message code="welcome.greeting.suffix" /></p>
 				</jstl:if>
 				
+				 
 				
 				<!-- Anuncio aleatorio -->
 				<div class="row">

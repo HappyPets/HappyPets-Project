@@ -17,6 +17,23 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 <br>
+
+<!-- -----------DATAPICKER------------- -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepickerStart" ).datepicker({ dateFormat: 'dd-mm-yy', minDate: "-0D",});
+    $( "#datepickerEnd" ).datepicker({ dateFormat: 'dd-mm-yy', minDate: "-0D",});
+  } );
+  </script>
+  
+<!-- ---------FIN DATAPICKER-------------- -->
+
+
 <!-- START JOB OFFER CREATE VIEW -->
 <div class="container-fluid">
 	<!-- START ERROR PANEL -->
@@ -70,12 +87,14 @@
 									</div>
 								</div>
 								<div class="row">
+								
 									<div class="col-md-6">
-										<acme:textbox code="jobOffer.startDate" path="startDate"/>
+										<b><spring:message code="jobOffer.startDate"/></b><input type="text" id="datepickerStart" name="startDate" form="jobOfferForm">
 									</div>
 									<div class="col-md-6">
-										<acme:textbox code="jobOffer.endDate" path="endDate"/>
+										<b><spring:message code="jobOffer.endDate"/></b><input type="text" id="datepickerEnd" name="endDate" form="jobOfferForm">
 									</div>
+									
 								</div>
 								<div class="row">
 									<div class="col-md-12">

@@ -1,6 +1,7 @@
 
 package controllers.user;
 
+import java.util.Calendar;
 import java.util.Collection;
 
 import javax.validation.Valid;
@@ -170,6 +171,7 @@ public class JobOfferUserController extends AbstractController {
 				JobOffer jobOffer = this.jobOfferService.create();
 				if (jobOfferForm.getId() != 0)
 					jobOffer = this.jobOfferService.findOne(jobOfferForm.getId());
+				Assert.isTrue(jobOfferForm.getStartDate().after(Calendar.getInstance().getTime()));
 				Assert.isTrue(jobOfferForm.getEndDate().after(jobOfferForm.getStartDate()));
 				jobOffer.setTitle(jobOfferForm.getTitle());
 				jobOffer.setDescription(jobOfferForm.getDescription());
