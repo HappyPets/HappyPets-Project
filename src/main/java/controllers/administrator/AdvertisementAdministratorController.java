@@ -21,18 +21,6 @@ public class AdvertisementAdministratorController extends AbstractController {
 	private AdvertisementService	advertisementService;
 
 
-	// Ban -------------------------------
-	@RequestMapping(value = "/ban")
-	public ModelAndView ban(@RequestParam final int advertisementId) {
-		ModelAndView res = new ModelAndView();
-		try {
-			this.advertisementService.banAdvertisement(advertisementId);
-			res = new ModelAndView("redirect:/advertisement/administrator/list.do");
-		} catch (final Throwable oops) {
-			res = new ModelAndView("redirect:/advertisement/administrator/list.do?errorMessage=" + "error.list.advertisement");
-		}
-		return res;
-	}
 	// List -------------------------------
 	@RequestMapping(value = "/list")
 	public ModelAndView list(@RequestParam(required = false) final String errorMessage) {
@@ -45,6 +33,18 @@ public class AdvertisementAdministratorController extends AbstractController {
 			res.addObject("error", errorMessage);
 		} catch (final Throwable oops) {
 			res.addObject("error", "error.list.advertisement");
+		}
+		return res;
+	}
+	// Ban -------------------------------
+	@RequestMapping(value = "/ban")
+	public ModelAndView ban(@RequestParam final int advertisementId) {
+		ModelAndView res = new ModelAndView();
+		try {
+			this.advertisementService.banAdvertisement(advertisementId);
+			res = new ModelAndView("redirect:/advertisement/administrator/list.do");
+		} catch (final Throwable oops) {
+			res = new ModelAndView("redirect:/advertisement/administrator/list.do?errorMessage=" + "error.list.advertisement");
 		}
 		return res;
 	}
