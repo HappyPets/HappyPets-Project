@@ -45,12 +45,14 @@
 			</div>
 		</div>
 	</jstl:if>
-	<jstl:if test="${create eq true }">
+	
+	<jstl:if test="${create eq true}">
 		<div class="row">
 			<div class="col-md-12">
 				<br />
 				<p class="bg-success text-center"><spring:message code="jobOffer.ok.create" /></p>
 			</div>
+			
 		</div>
 	</jstl:if>
 	<jstl:if test="${create eq false }">
@@ -59,6 +61,9 @@
 				<br />
 				<p class="bg-danger text-center"><spring:message code="jobOffer.error.create" /></p>
 			</div>
+			<div class="row">
+			
+		</div>
 		</div>
 	</jstl:if>
 	<!-- END ERROR PANEL -->

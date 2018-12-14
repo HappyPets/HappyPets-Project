@@ -15,20 +15,25 @@ import domain.AdoptionRequest;
 import domain.Category;
 import domain.JobOffer;
 import domain.Pet;
+import domain.TabooWords;
 import domain.User;
+import forms.PetForm;
 
 @Service
 @Transactional
 public class PetService {
 
 	@Autowired
-	private PetRepository	petRepository;
+	private PetRepository		petRepository;
 
 	@Autowired
-	private ActorService	actorService;
+	private ActorService		actorService;
 
 	@Autowired
-	private JobOfferService	jobbOfferService;
+	private JobOfferService		jobbOfferService;
+
+	@Autowired
+	private TabooWordsService	tabooWordsService;
 
 
 	// Constructor --------------------------------------------
@@ -99,4 +104,19 @@ public class PetService {
 		return res;
 	}
 
+	// Método que detecta tabooWords
+	public Boolean hasTabooWords(final PetForm pf) {
+		Assert.isTrue(this.actorService.isAuthenticated());
+		Boolean res = false;
+		final String name = pf.getName();
+		final String description = pf.getDescription();
+		final String healthdescription = pf.getHealthDescription();
+		final TabooWords tabooWords = this.tabooWordsService.getTabooWords();
+		final Collection<String> tw = tabooWords.getWords();
+		for (final String s : tw)
+			if (name.contains(s) || description.contains(s) || healthdescription.contains(s))
+				res = true;
+
+		return res;
+	}
 }

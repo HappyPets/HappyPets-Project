@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import services.ActorService;
 import services.JobOfferService;
-import services.TabooWordsService;
 import controllers.AbstractController;
 import domain.Inscription;
 import domain.JobOffer;
@@ -30,13 +29,10 @@ import forms.JobOfferForm;
 public class JobOfferUserController extends AbstractController {
 
 	@Autowired
-	private JobOfferService		jobOfferService;
+	private JobOfferService	jobOfferService;
 
 	@Autowired
-	private ActorService		actorService;
-
-	@Autowired
-	private TabooWordsService	tabooWordsService;
+	private ActorService	actorService;
 
 
 	// Own ----------------------------------------------------------------
@@ -164,6 +160,7 @@ public class JobOfferUserController extends AbstractController {
 	@RequestMapping(value = "/create", method = RequestMethod.POST, params = "save")
 	public ModelAndView save(@Valid final JobOfferForm jobOfferForm, final BindingResult binding) {
 		ModelAndView res = new ModelAndView();
+
 		if (binding.hasErrors())
 			res = this.createEditModelAndView(jobOfferForm);
 		else
@@ -171,6 +168,9 @@ public class JobOfferUserController extends AbstractController {
 				JobOffer jobOffer = this.jobOfferService.create();
 				if (jobOfferForm.getId() != 0)
 					jobOffer = this.jobOfferService.findOne(jobOfferForm.getId());
+
+				Assert.isTrue((this.jobOfferService.hasTabooWords(jobOfferForm)) == false);
+
 				Assert.isTrue(jobOfferForm.getStartDate().after(Calendar.getInstance().getTime()));
 				Assert.isTrue(jobOfferForm.getEndDate().after(jobOfferForm.getStartDate()));
 				jobOffer.setTitle(jobOfferForm.getTitle());

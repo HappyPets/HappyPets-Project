@@ -56,7 +56,7 @@ public class TabooWordsService {
 	}
 
 	public TabooWords getTabooWords() {
-		Assert.isTrue(this.actorService.isAdmin());
+		Assert.isTrue(this.actorService.isAdmin() || this.actorService.isUser());
 		final List<TabooWords> all = this.tabooWordsRepository.findAll();
 		final TabooWords res = all.get(0);
 		return res;

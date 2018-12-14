@@ -15,7 +15,9 @@ import domain.Inscription;
 import domain.JobOffer;
 import domain.Message;
 import domain.Status;
+import domain.TabooWords;
 import domain.User;
+import forms.JobOfferForm;
 
 @Service
 @Transactional
@@ -138,4 +140,20 @@ public class JobOfferService {
 				res.add(jobOffer);
 		return res;
 	}
+
+	// Método que detecta tabooWords
+	public Boolean hasTabooWords(final JobOfferForm jof) {
+		Assert.isTrue(this.actorService.isAuthenticated());
+		Boolean res = false;
+		final String title = jof.getTitle();
+		final String description = jof.getDescription();
+		final TabooWords tabooWords = this.tabooWordsService.getTabooWords();
+		final Collection<String> tw = tabooWords.getWords();
+		for (final String s : tw)
+			if (title.contains(s) || description.contains(s))
+				res = true;
+
+		return res;
+	}
+
 }

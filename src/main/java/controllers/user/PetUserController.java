@@ -159,6 +159,8 @@ public class PetUserController extends AbstractController {
 					pet = this.petService.findOne(petForm.getId());
 					oldAdoptionValue = pet.isInAdoption();
 				}
+				Assert.isTrue((this.petService.hasTabooWords(petForm)) == false);
+
 				pet.setCategory(petForm.getCategory());
 				pet.setName(petForm.getName());
 				pet.setAge(petForm.getAge());
