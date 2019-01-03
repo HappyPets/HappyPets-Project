@@ -27,6 +27,20 @@
 		</div>
 	</security:authorize>
 	<br>
+	
+	<!-- START SUCCESS PANEL -->
+	<jstl:if test="${error eq ''}">
+		<jstl:if test="${create eq true }">
+			<div class="row">
+				<div class="col-md-12">
+					<br />
+					<p class="bg-success text-center"><spring:message code="ok.create.cause" /></p>
+				</div>
+			</div>
+			</jstl:if>
+	</jstl:if>
+	<!-- END SUCCESS PANEL -->
+	
 <!-- START CAUSE LISTS -->
 <security:authorize access="hasRole('COMPANY') or hasRole('VET') or hasRole('USER')">
 	<jstl:if test="${causes.size() eq 0}" >

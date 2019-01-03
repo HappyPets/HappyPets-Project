@@ -27,7 +27,7 @@ public class CauseSubActorController extends AbstractController {
 
 	// List -------------------------------
 	@RequestMapping(value = "/list")
-	public ModelAndView list() {
+	public ModelAndView list(@RequestParam(required = false) final String create) {
 		ModelAndView res = new ModelAndView();
 		try {
 			res = new ModelAndView("cause/list");
@@ -37,6 +37,8 @@ public class CauseSubActorController extends AbstractController {
 				res.addObject("cancelCauses", cancelCauses);
 			}
 			res.addObject("causes", causes);
+			res.addObject("error", "");
+			res.addObject("create", create);
 
 		} catch (final Throwable oops) {
 			res.addObject("error", "error.list");

@@ -81,7 +81,7 @@ public class DonationSubActorController extends AbstractController {
 			res = this.createEditModelAndView(donationForm);
 		else
 			try {
-				final Cause cause = this.causeService.findOne(donationForm.getCauseId());
+				Cause cause = this.causeService.findOne(donationForm.getCauseId());
 				Donation donation = this.donationService.create(cause);
 
 				//Comprobamos que la creditcard introducida es válida
@@ -99,8 +99,12 @@ public class DonationSubActorController extends AbstractController {
 				donation.setQuantity(donationForm.getQuantity());
 
 				donation = this.donationService.save(donation);
-
-				res = new ModelAndView("redirect:/cause/subActor/list.do");
+				cause.getDonations().add(donation);
+				if (this.actorService.isAdmin())
+					cause = this.causeService.save(cause);
+				if (this.actorService.isCompany() || this.actorService.isUser() || this.actorService.isVet())
+					cause = this.causeService.saveDonations(cause);
+				res = new ModelAndView("redirect:/cause/subActor/list.do?create=true");
 			} catch (final Throwable oops) {
 				res = this.createEditModelAndView(donationForm, "error.save.donation");
 			}
