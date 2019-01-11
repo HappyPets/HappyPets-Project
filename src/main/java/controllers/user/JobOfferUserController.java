@@ -189,6 +189,7 @@ public class JobOfferUserController extends AbstractController {
 					res = new ModelAndView("redirect:/jobOffer/user/display.do?jobOfferId=" + jobOffer.getId() + "&create=true");
 			} catch (final Throwable oops) {
 				res = new ModelAndView("redirect:/jobOffer/user/create.do?jobOfferId=" + jobOfferForm.getId() + "&create=false");
+
 			}
 		return res;
 	}
