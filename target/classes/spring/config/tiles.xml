@@ -39,6 +39,8 @@
 		<value>/views/tabooWords/tiles.xml</value>
 		<value>/views/cause/tiles.xml</value>
 		<value>/views/donation/tiles.xml</value>
+		<value>/views/comment/tiles.xml</value>
+		<value>/views/message/tiles.xml</value>
 	</util:list>
 
 </beans>

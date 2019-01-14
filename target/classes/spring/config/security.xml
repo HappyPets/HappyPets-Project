@@ -49,18 +49,21 @@
 		<security:intercept-url pattern="/adoptionRequest/user/**" access="hasRole('USER')" />
 		<security:intercept-url pattern="/jobOffer/user/**" access="hasRole('USER')" />
 		<security:intercept-url pattern="/inscription/user/**" access="hasRole('USER')" />
+		<security:intercept-url pattern="/message/user/**" access="hasRole('USER')" />
 		
 		<security:intercept-url pattern="/tabooWords/administrator/**" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/advertisement/administrator/**" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/priceAdvertisement/administrator/**" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/jobOffer/administrator/**" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/cause/administrator/**" access="hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/comment/administrator/**" access="hasRole('ADMINISTRATOR')" />
 		
 		<security:intercept-url pattern="/cause/subActor/display.do" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY')" />
 		
 		<security:intercept-url pattern="/advertisement/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY')" />
 		<security:intercept-url pattern="/cause/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY') or hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/donation/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY')" />
+		<security:intercept-url pattern="/comment/subactor/**" access="hasRole('USER') or hasRole('VET') or hasRole('COMPANY') or hasRole('ADMINISTRATOR')" />
 		
 	
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
