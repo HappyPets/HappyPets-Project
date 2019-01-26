@@ -93,7 +93,7 @@
 				<!-- start back button -->
 				<div class="row">
 					<div class="col-md-6">
-						<acme:back code="message.back"/>
+						<acme:cancel url="/message/user/inbox.do" code="message.back"/>
 						<br/><br/>
 					</div>
 				</div>
