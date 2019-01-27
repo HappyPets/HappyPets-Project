@@ -18,7 +18,17 @@
 
 
 <div class="container-fluid">
-	<div class="row">
+
+	<div class="row">	
+		<div class="col-md-7">
+		</div>
+		<div class="col-md-5">
+		<jstl:if test="${unread != 0}">
+				<input class="btn btn-sg btn-success" type="button" onclick="window.location.href='message/user/inbox.do'" value="<spring:message code="message.unread"/> <jstl:out value="${unread}"/>"/>
+		</jstl:if>	
+		</div>
+	</div>
+	<div class="row">	
 		<div class="col-md-12">
 			<jstl:if test="${errorMessage != null}">
 				<span class="message" style="color:red"><spring:message code="${errorMessage}" /></span>
@@ -31,7 +41,7 @@
 					<p><spring:message code="welcome.greeting.prefix" /> ${name}<spring:message code="welcome.greeting.suffix" /></p>
 				</jstl:if>
 				
-				 
+				
 				
 				<!-- Anuncio aleatorio -->
 				<div class="row">

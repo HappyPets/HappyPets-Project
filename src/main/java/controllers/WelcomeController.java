@@ -23,6 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import services.ActorService;
 import services.AdvertisementService;
+import services.MessageService;
 import domain.Advertisement;
 
 @Controller
@@ -38,6 +39,9 @@ public class WelcomeController extends AbstractController {
 
 	@Autowired
 	private ActorService			actorService;
+
+	@Autowired
+	private MessageService			messageService;
 
 	@Autowired
 	private AdvertisementService	advertisementService;
@@ -70,7 +74,18 @@ public class WelcomeController extends AbstractController {
 			Assert.notNull(advertisement);
 		}
 
+		//Notificar mensajes sin leer
+		Integer unread = 0;
+		try {
+			if (this.actorService.isAuthenticated())
+				if (this.actorService.isUser())
+					unread = this.messageService.getUnreadMessages();
+		} catch (final Throwable oops) {
+
+		}
+
 		result = new ModelAndView("welcome/index");
+		result.addObject("unread", unread);
 		result.addObject("name", name);
 		result.addObject("moment", moment);
 		result.addObject("advertisement", advertisement);

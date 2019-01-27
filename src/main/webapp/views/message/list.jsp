@@ -84,11 +84,20 @@
 							<display:table name="${messages}" pagesize="5" class="displaytag table table-hover" requestURI="${requestURI}" id="row">
 								<spring:message code="message.subject" var="headerTag" />
 								<display:column title="${headerTag}">
+								<jstl:if test="${row.isRead eq false }">
+									<jstl:if test="${inbox }">
+										<b><a href="message/user/display.do?messageId=${row.id}&box=inbox">
+											<jstl:out value="${row.subject}" />
+										</a></b>
+									</jstl:if>
+								</jstl:if>
+								<jstl:if test="${row.isRead eq true }">
 									<jstl:if test="${inbox }">
 										<a href="message/user/display.do?messageId=${row.id}&box=inbox">
 											<jstl:out value="${row.subject}" />
 										</a>
 									</jstl:if>
+								</jstl:if>
 									<jstl:if test="${outbox }">
 										<a href="message/user/display.do?messageId=${row.id}&box=outbox">
 											<jstl:out value="${row.subject}" />
@@ -98,13 +107,20 @@
 								<jstl:if test="${inbox }">
 									<spring:message code="message.from" var="headerTag" />
 									<display:column title="${headerTag}">
+									<jstl:if test="${row.isRead eq false }">
+										<b><a href="profile/subActor/display.do?subActorId=${row.sender.id}&box=inbox">
+											<jstl:out value="${row.sender.name}" /> <jstl:out value="${row.sender.surname}" />
+										</a></b>
+									</jstl:if>
+									<jstl:if test="${row.isRead eq true }">
 										<a href="profile/subActor/display.do?subActorId=${row.sender.id}&box=inbox">
 											<jstl:out value="${row.sender.name}" /> <jstl:out value="${row.sender.surname}" />
 										</a>
+									</jstl:if>
 									</display:column>
 								</jstl:if>
 								<jstl:if test="${outbox }">
-									<spring:message code="message.from" var="headerTag" />
+									<spring:message code="message.to" var="headerTag" />
 									<display:column title="${headerTag}">
 										<a href="profile/subActor/display.do?subActorId=${row.receiver.id}&box=inbox">
 											<jstl:out value="${row.receiver.name}" /> <jstl:out value="${row.receiver.surname}" />

@@ -881,6 +881,8 @@
 		<property name="receiver" ref="user2"/>
 
 		<property name="isCopy" value="false"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -899,6 +901,8 @@
 		<property name="receiver" ref="user2"/>
 
 		<property name="isCopy" value="true"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -917,6 +921,8 @@
 		<property name="receiver" ref="user3"/>
 
 		<property name="isCopy" value="false"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -935,6 +941,8 @@
 		<property name="receiver" ref="user3"/>
 
 		<property name="isCopy" value="true"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -953,6 +961,8 @@
 		<property name="receiver" ref="user4"/>
 
 		<property name="isCopy" value="false"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -971,6 +981,8 @@
 		<property name="receiver" ref="user4"/>
 
 		<property name="isCopy" value="true"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -989,6 +1001,8 @@
 		<property name="receiver" ref="user5"/>
 
 		<property name="isCopy" value="false"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -1007,6 +1021,8 @@
 		<property name="receiver" ref="user5"/>
 
 		<property name="isCopy" value="true"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -1025,6 +1041,8 @@
 		<property name="receiver" ref="user1"/>
 
 		<property name="isCopy" value="false"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 
@@ -1043,6 +1061,8 @@
 		<property name="receiver" ref="user1"/>
 
 		<property name="isCopy" value="true"/>
+		
+		<property name="isRead" value="true"/>
 
 	</bean>
 

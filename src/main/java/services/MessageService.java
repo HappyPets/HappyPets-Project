@@ -41,6 +41,7 @@ public class MessageService {
 		message.setSendMoment(new Date(Calendar.getInstance().getTimeInMillis() - 1000));
 		message.setSender(logued);
 		message.setIsCopy(false);
+		message.setIsRead(false);
 		return message;
 	}
 
@@ -49,6 +50,14 @@ public class MessageService {
 		Assert.isTrue(this.actorService.isUser());
 		final User logued = (User) this.actorService.findByPrincipal();
 		Assert.isTrue(logued.equals(message.getSender()));
+		message = this.messageRepository.save(message);
+		return message;
+	}
+	public Message saveRead(Message message) {
+		Assert.notNull(message);
+		Assert.isTrue(this.actorService.isUser());
+		final User logued = (User) this.actorService.findByPrincipal();
+		Assert.isTrue(logued.equals(message.getReceiver()) || logued.equals(message.getSender()));
 		message = this.messageRepository.save(message);
 		return message;
 	}
@@ -107,6 +116,7 @@ public class MessageService {
 
 		Message message_ = this.create();
 		message_.setIsCopy(true);
+		message_.setIsRead(true);
 		message_.setSubject(message.getSubject());
 		message_.setText(message.getText());
 		message_.setReceiver(message.getReceiver());
@@ -115,4 +125,20 @@ public class MessageService {
 		return message;
 	}
 
+	// Método para econtar numero de mensajes no leídos
+	public Integer getUnreadMessages() {
+		Integer res = 0;
+		Assert.isTrue(this.actorService.isUser());
+		final User logued = (User) this.actorService.findByPrincipal();
+		final Collection<Message> messages = logued.getReceivedMessages();
+		final Collection<Message> unreadMessages = new ArrayList<Message>();
+		for (final Message m : messages)
+			if (m.getIsRead() == false)
+				unreadMessages.add(m);
+
+		if (unreadMessages.size() != 0)
+			res = unreadMessages.size();
+
+		return res;
+	}
 }

@@ -87,7 +87,9 @@ public class MessageUserController extends AbstractController {
 			final User logued = (User) this.actorService.findByPrincipal();
 			final Message message = this.messageService.findOne(messageId);
 			Assert.isTrue(message.getSender().equals(logued) || message.getReceiver().equals(logued));
-			res.addObject("msg", message);
+			message.setIsRead(true);
+			final Message msg = this.messageService.saveRead(message);
+			res.addObject("msg", msg);
 			res.addObject("box", box);
 			res.addObject("error", "");
 		} catch (final Throwable oops) {

@@ -122,7 +122,7 @@
 			  	</security:authorize>
 			  	<security:authorize access="isAuthenticated()">			
 					<li class="dropdown">
-						<a class="fNiv dropdown-toggle" data-toggle="dropdown" href="#"><security:authentication property="principal.username" /><span class="caret"></span></a>
+						<a class="fNiv dropdown-toggle" data-toggle="dropdown" href="#"><security:authentication property="principal.username"/><span class="caret"></span></a>
 						<ul class="dropdown-menu">
 			  				<security:authorize access="hasRole('USER')">
 			  					<li><a href="message/user/inbox.do"><spring:message code="master.page.messages" /></a></li>

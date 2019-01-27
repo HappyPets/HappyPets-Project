@@ -25,6 +25,7 @@ public class Message extends DomainEntity {
 	private String	subject, text;
 	private Date	sendMoment;
 	private boolean	isCopy;
+	private boolean	isRead;
 
 
 	// Getters and setters ----------------------------------------------------
@@ -66,6 +67,14 @@ public class Message extends DomainEntity {
 
 	public void setIsCopy(final boolean isCopy) {
 		this.isCopy = isCopy;
+	}
+
+	public boolean getIsRead() {
+		return this.isRead;
+	}
+
+	public void setIsRead(final boolean isRead) {
+		this.isRead = isRead;
 	}
 
 
