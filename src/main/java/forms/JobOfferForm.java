@@ -23,7 +23,7 @@ public class JobOfferForm {
 	private int	id, version;
 	private String	title, description, city;
 	private Date	startDate, endDate;
-	private Double	salary;
+	private double	salary;
 	private Pet		pet;
 
 
@@ -113,14 +113,13 @@ public class JobOfferForm {
 		this.endDate = endDate;
 	}
 
-	@NotNull
 	@Min(0)
 	@Digits(integer = 9, fraction = 2)
-	public Double getSalary() {
+	public double getSalary() {
 		return this.salary;
 	}
 
-	public void setSalary(final Double salary) {
+	public void setSalary(final double salary) {
 		this.salary = salary;
 	}
 

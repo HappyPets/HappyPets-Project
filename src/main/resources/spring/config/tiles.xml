@@ -41,6 +41,7 @@
 		<value>/views/donation/tiles.xml</value>
 		<value>/views/comment/tiles.xml</value>
 		<value>/views/message/tiles.xml</value>
+		<value>/views/priceAdvertisement/tiles.xml</value>
 	</util:list>
 
 </beans>

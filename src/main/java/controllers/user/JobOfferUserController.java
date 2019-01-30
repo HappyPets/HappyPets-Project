@@ -151,8 +151,10 @@ public class JobOfferUserController extends AbstractController {
 				res = new ModelAndView("redirect:/welcome/index.do?errorMessage=" + "error.notAuthorize	");
 				res.addObject("create", create);
 			}
-		else
+		else {
 			res = this.createEditModelAndView(jobOfferForm);
+			res.addObject("create", create);
+		}
 		return res;
 	}
 
@@ -169,17 +171,19 @@ public class JobOfferUserController extends AbstractController {
 				if (jobOfferForm.getId() != 0)
 					jobOffer = this.jobOfferService.findOne(jobOfferForm.getId());
 
-				Assert.isTrue((this.jobOfferService.hasTabooWords(jobOfferForm)) == false);
-
-				Assert.isTrue(jobOfferForm.getStartDate().after(Calendar.getInstance().getTime()));
-				Assert.isTrue(jobOfferForm.getEndDate().after(jobOfferForm.getStartDate()));
-				jobOffer.setTitle(jobOfferForm.getTitle());
-				jobOffer.setDescription(jobOfferForm.getDescription());
 				jobOffer.setCity(jobOfferForm.getCity());
 				jobOffer.setStartDate(jobOfferForm.getStartDate());
 				jobOffer.setEndDate(jobOfferForm.getEndDate());
 				jobOffer.setSalary(jobOfferForm.getSalary());
 				jobOffer.setPet(jobOfferForm.getPet());
+
+				Assert.isTrue((this.jobOfferService.hasTabooWords(jobOfferForm)) == false);
+
+				jobOffer.setTitle(jobOfferForm.getTitle());
+				jobOffer.setDescription(jobOfferForm.getDescription());
+
+				Assert.isTrue(jobOfferForm.getStartDate().after(Calendar.getInstance().getTime()));
+				Assert.isTrue(jobOfferForm.getEndDate().after(jobOfferForm.getStartDate()));
 
 				jobOffer = this.jobOfferService.save(jobOffer);
 

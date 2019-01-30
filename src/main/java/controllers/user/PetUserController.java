@@ -140,8 +140,10 @@ public class PetUserController extends AbstractController {
 			} catch (final Throwable oops) {
 				res = new ModelAndView("redirect:/welcome/index.do?errorMessage=" + "error.notAuthorize	");
 			}
-		else
+		else {
 			res = this.createEditModelAndView(petForm);
+			res.addObject("create", create);
+		}
 		return res;
 	}
 
